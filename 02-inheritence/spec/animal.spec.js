@@ -11,14 +11,14 @@ const Dog = Main.Dog;
 
 describe('Animal', function () {
 
-    // try replacing these functions with 'Fat Arrows'
-    // http://blog.continuation.io/how-to-abuse-the-fat-arrow/
-
     beforeEach( function () {
 
-        this.Hippo = new Animal({
-            name: 'Hungry, Hungry'
-        });
+        this.Hippo = new Animal('Hungry, Hungry');
+    });
+
+    it('should have 0 calories', function () {
+
+        expect(this.Hippo.calories).toBe(0);
     });
 
     it('can consume calories', function () {
@@ -30,6 +30,12 @@ describe('Animal', function () {
 
         expect(this.Hippo.calories).toBeGreaterThan(0);
     });
+
+    it('should have 0 calories, again', function() {
+
+        expect(this.Hippo.calories).toBe(0);
+    });
+
 });
 
 
@@ -37,9 +43,7 @@ describe('Dog', function () {
 
     beforeEach( function () {
 
-        this.Lassie = new Dog({
-            name: 'Lassie'
-        });
+        this.Lassie = new Dog('Lassie');
 
         spyOn(this.Lassie, 'bark');
     });
