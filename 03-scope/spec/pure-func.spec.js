@@ -11,7 +11,6 @@ describe('Pure Function', function () {
     it('adding a new person does not modify the original data structure');
     it('pruning fruits does not modify the original data structure', function() {
 
-        let fruits = PureFunc.fruits;
         let myFavoriteFruit =  favoriteFruits(fruits);
         expect(myFavoriteFruit).not.toContain('pear');
         expect(fruits).not.toContain('pear');

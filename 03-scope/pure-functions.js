@@ -12,11 +12,9 @@ const favoriteFruits = function (fruitChoices) {
     // return only your favorite fruits
     // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
-    let favoriteFruits = fruitChoices.filter(function(fruit){
+    return fruitChoices.filter(function (fruit) {
         return fruit !== 'pear';
     });
-
-    return favoriteFruits;
 };
 
 const addPeople = function (people) {
